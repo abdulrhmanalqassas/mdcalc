@@ -2,11 +2,14 @@ import { questions } from "./data";
 import React, { useState } from "react";
 const questionsAns = {};
 
-
 function GetAll(questions) {
-    
   const [score, setScore] = useState(0);
-
+  const isActiveStyle = {
+    active:
+      "flex items-center p-3  font-bold text-gray-700 rounded-lg bg-blue-200 hover:bg-blue-100 group hover:shadow dark:bg-blue-600 dark:hover:bg-blue-400 dark:text-white",
+    notActive:
+      "flex items-center p-3  font-bold text-gray-700 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white",
+  };
 
   const handleClick = (question, choiceValue) => {
     var finalScore = 0;
@@ -48,12 +51,17 @@ function GetAll(questions) {
     if (Object.hasOwnProperty.call(questions, key)) {
       const element = questions[key];
       var option = element.map((elem, index) => {
+        console.log("allQuestions",questionsAns)
         return (
           <li key={Object.keys(elem)}>
             <div
               onClick={() => handleClick(question, elem[Object.keys(elem)])}
               href="#"
-              className="flex items-center p-3  font-bold text-gray-700 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
+              className={
+                elem[Object.keys(elem)] === questionsAns[question]
+                  ? isActiveStyle["active"]
+                  : isActiveStyle["notActive"]
+              }
             >
               <span className="flex-1 ml-3 "> {Object.keys(elem)}</span>
               <span className="inline-flex items-center justify-center px-2 py-0.5 ml-3 text-xs font-medium text-gray-500 bg-gray-200 rounded dark:bg-gray-700 dark:text-gray-400">
@@ -63,7 +71,7 @@ function GetAll(questions) {
           </li>
         );
       });
-      allQuestions.push(<Listitem question={question} option={option} />);
+      allQuestions.push(<Listitem  question={question} option={option} />);
     }
   }
   return (
