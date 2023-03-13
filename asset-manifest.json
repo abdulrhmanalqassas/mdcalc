@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/mdcalc/static/css/main.1aabd633.css",
+    "main.js": "/mdcalc/static/js/main.9e937077.js",
+    "static/js/787.b0bd5b0c.chunk.js": "/mdcalc/static/js/787.b0bd5b0c.chunk.js",
+    "index.html": "/mdcalc/index.html",
+    "main.1aabd633.css.map": "/mdcalc/static/css/main.1aabd633.css.map",
+    "main.9e937077.js.map": "/mdcalc/static/js/main.9e937077.js.map",
+    "787.b0bd5b0c.chunk.js.map": "/mdcalc/static/js/787.b0bd5b0c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1aabd633.css",
+    "static/js/main.9e937077.js"
+  ]
+}
