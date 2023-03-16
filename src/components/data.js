@@ -20,3 +20,47 @@ export const questions = {
     { "Definite": 0 },
   ],
 };
+//////////////////
+
+export const ISTHquestions = {
+  "Platelet count, cells x 109/L": [
+    { "≥ 1000": 0 },
+    { "50 to <100": 1 },
+    { "<50": 2 },
+  ],
+  "Elevated levels of a fibrinrelated marker (e.g. Ddimer, fibrin degradation products": [
+    { "No increase": 0},
+    { "Moderateincrease": 2 },
+    { "Severe increase": 3 },
+  ],
+  "Prolonged PT, seconds": [
+    { "<3": 0 },
+    { "3 to <6": 1 },
+    { "≥6": 2 },
+  ],
+  "Fibrinogen level, g/L": [
+    { "≥1": 0 },
+    { "<1": 1 },
+    
+  ],
+};
+
+////////////////
+export const SIRSquestions = {
+  "Thrombocytopenia": [
+    { "YES": 1 },
+    { "NO": 0 },
+  ],
+  "hhhhhhhhhhhhhhh": [
+    { "YES": 1 },
+    { "NO": 0 },
+  ],
+  "Thrombosis or other sequelae": [
+    { "YES": 1 },
+    { "NO": 0 },
+  ],
+  "Other causes for thrombocytopenia":[
+    { "YES": 1 },
+    { "NO": 0 },
+  ],
+};

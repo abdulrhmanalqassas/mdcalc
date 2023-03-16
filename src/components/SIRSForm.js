@@ -1,7 +1,7 @@
-import { questions } from "./data";
+import { SIRSquestions} from "./data";
 import React, { useState } from "react";
 const questionsAns = {};
-
+const questions = SIRSquestions;
 function GetAll(questions) {
   const [score, setScore] = useState(0);
   const isActiveStyle = {

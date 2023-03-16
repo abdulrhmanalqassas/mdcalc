@@ -1,6 +1,7 @@
-import { questions } from "./data";
+import { ISTHquestions } from "./data";
 import React, { useState } from "react";
 const questionsAns = {};
+const questions = ISTHquestions;
 
 function GetAll(questions) {
   const [score, setScore] = useState(0);
@@ -21,26 +22,26 @@ function GetAll(questions) {
     setScore(finalScore);
   };
   const ScoreCard = ({ score }) => {
-   const  scoreString = {
-    0:"low probability of HIT:<5%",
-    1:"low probability of HIT:<5%",
-    2:"low probability of HIT:<5%",
-    3:"low probability of HIT:<5%",
-    4:"intermediate probability of HIT:`14%",
-    5:"intermediate probability of HIT:`14%",
-    6:"high probability of HIT:~64%",
-    7:"high probability of HIT:~64%",
-    8:"high probability of HIT:~64%",
-   }
+    const scoreString = {
+       
+
+      0: "not suggestive of overt DIC, may be non-overt DIC; repeat within next 1-2 days and manage clinically as appropriate.",
+      1: "not suggestive of overt DIC, may be non-overt DIC; repeat within next 1-2 days and manage clinically as appropriate.",
+      2: "not suggestive of overt DIC, may be non-overt DIC; repeat within next 1-2 days and manage clinically as appropriate.",
+      3: "not suggestive of overt DIC, may be non-overt DIC; repeat within next 1-2 days and manage clinically as appropriate.",
+      4: "not suggestive of overt DIC, may be non-overt DIC; repeat within next 1-2 days and manage clinically as appropriate.",
+      5: "compatible with overt DIC; treat for DIC asappropriate and repeat scoring daily.",
+      6: "compatible with overt DIC; treat for DIC asappropriate and repeat scoring daily.",
+      7: "compatible with overt DIC; treat for DIC asappropriate and repeat scoring daily.",
+      8: "compatible with overt DIC; treat for DIC asappropriate and repeat scoring daily.",
+    };
     return (
       <>
         <div className=" m-auto my-2 w-full max-w-sm p-4 bg-green border border-gray-200 rounded-lg shadow sm:p-6 dark:bg-green-800 dark:border-gray-700">
           <h5 className="mb-3 text-base font-semibold text-gray-900 md:text-xl dark:text-white">
             {score} points
           </h5>
-          <ul className="my-4 space-y-3">
-            {scoreString[score]}
-          </ul>
+          <ul className="my-4 space-y-3">{scoreString[score]}</ul>
         </div>
       </>
     );
@@ -64,7 +65,7 @@ function GetAll(questions) {
     if (Object.hasOwnProperty.call(questions, key)) {
       const element = questions[key];
       var option = element.map((elem, index) => {
-        console.log("allQuestions",questionsAns)
+        console.log("allQuestions", questionsAns);
         return (
           <li key={Object.keys(elem)}>
             <div
@@ -84,16 +85,17 @@ function GetAll(questions) {
           </li>
         );
       });
-      allQuestions.push(<Listitem  question={question} option={option} />);
+      allQuestions.push(<Listitem question={question} option={option} />);
     }
   }
   return (
     <>
-    <h1  className="m-auto my-2 w-full max-w-sm p-4 text-base font-semibold text-gray-900 md:text-xl dark:text-gray-900">
-    4Ts Score for Heparin-Induced Thrombocytopenia:
-Differentiates patients with HIT from those with other causes of thrombocytopenia.
-
-    </h1>
+      <h1 className="m-auto my-2 w-full max-w-lg  p-4 text-base font-semibold text-gray-900 md:text-xl dark:text-gray-900">
+        ISTH Criteria ISTH Criteria used for Diagnoses of overt disseminated
+        intravascular coagulation (DIC) in Patients with suspected overt
+        disseminated intravascular coagulopathy (DIC), e.g. in the setting of
+        malignancy, severe infection or sepsis, obstetric complications, trauma.
+      </h1>
       {allQuestions}
       <ScoreCard score={score}></ScoreCard>
     </>
