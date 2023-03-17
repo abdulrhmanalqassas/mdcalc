@@ -64,14 +64,15 @@ function GetAll(questions) {
     if (Object.hasOwnProperty.call(questions, key)) {
       const element = questions[key];
       var option = element.map((elem, index) => {
-        console.log("allQuestions",questionsAns)
+        console.log("allQuestions",questionsAns,"eeeeeeeeeeelm", Object.keys(elem))
+
         return (
           <li key={Object.keys(elem)}>
             <div
-              onClick={() => handleClick(question, elem[Object.keys(elem)])}
+              onClick={() => handleClick(question, Object.keys(elem)[0])}
               href="#"
               className={
-                elem[Object.keys(elem)] === questionsAns[question]
+                Object.keys(elem)[0] === questionsAns[question]
                   ? isActiveStyle["active"]
                   : isActiveStyle["notActive"]
               }
