@@ -4,6 +4,7 @@ import QuestionsForm from "./components/QuestionsForm";
 import SIRSForm from "./components/SIRSForm";
 import ISTHForm from "./components/ISTHForm";
 import Khorana from "./components/khorana";
+import HASForm from "./components/HASForm";
 import Nav from "./nav";
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/SIRS" element={<SIRSForm />} />
         <Route path="/ISTH" element={<ISTHForm />} />
         <Route path="/Khorana" element={<Khorana />} />
+        <Route path="/HAS" element={<HASForm />} />
       </Routes>
     </div>
   );

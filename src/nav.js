@@ -59,6 +59,17 @@ export default function Nav() {
           Khorana
         </Link>
       </Typography>
+      {/* //HASForm */}
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1 font-normal"
+      >
+        <Link to="/HAS" className="flex items-center">
+          HAS-BLED
+        </Link>
+      </Typography>
     </ul>
   );
 
