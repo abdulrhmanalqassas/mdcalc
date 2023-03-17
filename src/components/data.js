@@ -47,20 +47,59 @@ export const ISTHquestions = {
 
 ////////////////
 export const SIRSquestions = {
-  "Thrombocytopenia": [
+  "Temp >38°C (100.4°F) or <36°C (96.8°F)": [
     { "YES": 1 },
     { "NO": 0 },
   ],
-  "hhhhhhhhhhhhhhh": [
+  "Heart rate >90": [
     { "YES": 1 },
     { "NO": 0 },
   ],
-  "Thrombosis or other sequelae": [
+  "Respiratory rate >20 or PaCO₂ <32 mm Hg": [
     { "YES": 1 },
     { "NO": 0 },
   ],
-  "Other causes for thrombocytopenia":[
+  "WBC >12,000/mm³, <4,000/mm³, or >10% bands":[
+    { "YES": 1 },
+    { "NO": 0 },
+  ],
+  "Suspected or present source of infection":[
+    { "YES": 1 },
+    { "NO": 0 },
+  ],
+  "Lactic acidosis, SBP <90 or SBP drop ≥40 mm Hg of normal":[
+    { "YES": 1 },
+    { "NO": 0 },
+  ],
+"Severe sepsis with hypotension, despite adequate fluid resuscitation":[
+  { "YES": 1 },
+  { "NO": 0 },
+]
+};
+
+// 
+export const khoronaQuestions ={
+  "Cancer type": [
+    { "Stomach": 2 },
+    { "Pancreas": 2 },
+    { "Lung": 1 },
+    { "Lymphoma": 1 },
+    { "Gynecologic": 1 },
+    { "Bladder": 1 },
+    { "Testicular": 1 },
+    { "Other": 0 },
+  ],
+  "Pre-chemotherapy platelet count ≥350x10⁹/L":[
+    { "YES": 1 },
+    { "NO": 0 },
+  ],
+  "Hemoglobin level <10 g/dL or using RBC growth factors":[
+    { "YES": 1 },
+    { "NO": 0 },
+  ],
+  "Pre-chemotherapy leukocyte count >11x10⁹/L":[
     { "YES": 1 },
     { "NO": 0 },
   ],
 };
+//////////////////
