@@ -1,6 +1,7 @@
-import { khoronaQuestions} from "./data";
+import { khoronaQuestions } from "./data";
 import React, { useState } from "react";
 const questionsAns = {};
+const questionsValue = {};
 const questions = khoronaQuestions;
 function GetAll(questions) {
   const [score, setScore] = useState(0);
@@ -11,36 +12,57 @@ function GetAll(questions) {
       "flex items-center p-3  font-bold text-gray-700 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white",
   };
 
-  const handleClick = (question, choiceValue) => {
+  const handleClick = (question, choiceValue, Value) => {
     var finalScore = 0;
     questionsAns[question] = choiceValue;
-    console.log(questionsAns);
-    for (const key in questionsAns) {
-      finalScore += questionsAns[key];
+    questionsValue[question] = Value;
+    console.log(questionsValue);
+    for (const key in questionsValue) {
+      finalScore += questionsValue[key];
     }
     setScore(finalScore);
   };
   const ScoreCard = ({ score }) => {
-   const  scoreString = {
-    0:"low probability of HIT:<5%",
-    1:"low probability of HIT:<5%",
-    2:"low probability of HIT:<5%",
-    3:"low probability of HIT:<5%",
-    4:"intermediate probability of HIT:`14%",
-    5:"intermediate probability of HIT:`14%",
-    6:"high probability of HIT:~64%",
-    7:"high probability of HIT:~64%",
-    8:"high probability of HIT:~64%",
-   }
+    const scoreString = {
+      0: `Low Risk (0 Points)
+
+      Rate of VTE at 2.5 months* = 0.3 - 0.8%
+      
+      *Note: Median follow-up time was 2.5 months.`,
+      1: `Intermediate Risk (1-2 Points)
+
+Rate of VTE at 2.5 months* = 1.8 - 2.0%
+
+*Note: Median follow-up time was 2.5 months.`,
+      2: `Intermediate Risk (1-2 Points)
+
+Rate of VTE at 2.5 months* = 1.8 - 2.0%
+
+*Note: Median follow-up time was 2.5 months.`,
+      3: `Intermediate Risk (1-2 Points)
+
+Rate of VTE at 2.5 months* = 1.8 - 2.0%
+
+*Note: Median follow-up time was 2.5 months.`,
+      4: `High Risk (≥3 Points)
+
+Rate of VTE at 2.5 months* = 6.7 - 7.1%
+
+*Note: Median follow-up time was 2.5 months.`,
+      5: `High Risk (≥3 Points)
+
+Rate of VTE at 2.5 months* = 6.7 - 7.1%
+
+*Note: Median follow-up time was 2.5 months.`,
+      
+    };
     return (
       <>
         <div className=" m-auto my-2 w-full max-w-sm p-4 bg-green border border-gray-200 rounded-lg shadow sm:p-6 dark:bg-green-800 dark:border-gray-700">
           <h5 className="mb-3 text-base font-semibold text-gray-900 md:text-xl dark:text-white">
             {score} points
           </h5>
-          <ul className="my-4 space-y-3">
-            {scoreString[score]}
-          </ul>
+          <ul className="my-4 space-y-3">{scoreString[score]}</ul>
         </div>
       </>
     );
@@ -64,12 +86,23 @@ function GetAll(questions) {
     if (Object.hasOwnProperty.call(questions, key)) {
       const element = questions[key];
       var option = element.map((elem, index) => {
-        console.log("allQuestions",questionsAns,"eeeeeeeeeeelm", Object.keys(elem))
+        console.log(
+          "allQuestions",
+          questionsAns,
+          "eeeeeeeeeeelm",
+          Object.keys(elem)
+        );
 
         return (
           <li key={Object.keys(elem)}>
             <div
-              onClick={() => handleClick(question, Object.keys(elem)[0])}
+              onClick={() =>
+                handleClick(
+                  question,
+                  Object.keys(elem)[0],
+                  elem[Object.keys(elem)[0]]
+                )
+              }
               href="#"
               className={
                 Object.keys(elem)[0] === questionsAns[question]
@@ -85,16 +118,16 @@ function GetAll(questions) {
           </li>
         );
       });
-      allQuestions.push(<Listitem  question={question} option={option} />);
+      allQuestions.push(<Listitem question={question} option={option} />);
     }
   }
   return (
     <>
-    <h1  className="m-auto my-2 w-full max-w-xl p-4 text-base font-semibold text-gray-900 md:text-xl dark:text-gray-900">
-    Khorana Risk Score for Venous Thromboembolism in Cancer Patients
-Predicts risk of VTE for cancer patients depending on type of cancer and other factors.
-
-    </h1>
+      <h1 className="m-auto my-2 w-full max-w-xl p-4 text-base font-semibold text-gray-900 md:text-xl dark:text-gray-900">
+        Khorana Risk Score for Venous Thromboembolism in Cancer Patients
+        Predicts risk of VTE for cancer patients depending on type of cancer and
+        other factors.
+      </h1>
       {allQuestions}
       <ScoreCard score={score}></ScoreCard>
     </>

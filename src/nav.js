@@ -6,7 +6,7 @@ import {
   Button,
   IconButton,
 } from "@material-tailwind/react";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 export default function Nav() {
   const [openNav, setOpenNav] = useState(false);
 
