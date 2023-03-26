@@ -32,7 +32,7 @@ export const questions = {
 
 export const ISTHquestions = {
   "Platelet count, cells x 109/L": [
-    { "≥ 1000": 0 },
+    { "≥ 100": 0 },
     { "50 to <100": 1 },
     { "<50": 2 },
   ],
@@ -97,5 +97,5 @@ export const HASquestions = {
   "Medication usage predisposing to bleeding Aspirin, clopidogrel, NSAIDs": [
     { YES: 1 },
     { NO: 0 },
-  ],
+  ], "BMI ≥35 kg/m^2 ": [{ YES: 1 }, { NO: 0 }],
 };

@@ -1,4 +1,4 @@
-import { SIRSquestions} from "./data";
+import { SIRSquestions } from "./data";
 import React, { useState } from "react";
 const questionsAns = {};
 const questions = SIRSquestions;
@@ -21,26 +21,14 @@ function GetAll(questions) {
     setScore(finalScore);
   };
   const ScoreCard = ({ score }) => {
-   const  scoreString = {
-    0:"low probability of HIT:<5%",
-    1:"low probability of HIT:<5%",
-    2:"low probability of HIT:<5%",
-    3:"low probability of HIT:<5%",
-    4:"intermediate probability of HIT:`14%",
-    5:"intermediate probability of HIT:`14%",
-    6:"high probability of HIT:~64%",
-    7:"high probability of HIT:~64%",
-    8:"high probability of HIT:~64%",
-   }
+    const scoreString = () => {};
     return (
       <>
-        <div className=" m-auto my-2 w-full max-w-sm p-4 bg-green border border-gray-200 rounded-lg shadow sm:p-6 dark:bg-green-800 dark:border-gray-700">
+        <div className="m-auto my-2 w-full max-w-sm p-4 bg-green border border-gray-200 rounded-lg shadow sm:p-6 dark:bg-green-800 dark:border-gray-700">
           <h5 className="mb-3 text-base font-semibold text-gray-900 md:text-xl dark:text-white">
             {score} points
           </h5>
-          <ul className="my-4 space-y-3">
-            {scoreString[score]}
-          </ul>
+          <ul className="my-4 space-y-3">{scoreString[score]}</ul>
         </div>
       </>
     );
@@ -64,7 +52,7 @@ function GetAll(questions) {
     if (Object.hasOwnProperty.call(questions, key)) {
       const element = questions[key];
       var option = element.map((elem, index) => {
-        console.log("allQuestions",questionsAns)
+        console.log("allQuestions", elem, index);
         return (
           <li key={Object.keys(elem)}>
             <div
@@ -84,16 +72,27 @@ function GetAll(questions) {
           </li>
         );
       });
-      allQuestions.push(<Listitem  question={question} option={option} />);
+
+      allQuestions.push(
+        <>
+          {" "}
+          {question === "Heart rate >90" && (
+            <h1 className="m-auto my-2 w-full max-w-sm p-4 text-base font-semibold text-gray-900 md:text-xl dark:text-gray-900">
+              m-auto my-2 w-full max-w-sm p-4 text-base font-semibold
+              text-gray-900 md:text-xl dark:text-gray-900
+            </h1>
+          )}{" "}
+          <Listitem question={question} option={option} />
+        </>
+      );
     }
   }
   return (
     <>
-    <h1  className="m-auto my-2 w-full max-w-sm p-4 text-base font-semibold text-gray-900 md:text-xl dark:text-gray-900">
-    4Ts Score for Heparin-Induced Thrombocytopenia:
-Differentiates patients with HIT from those with other causes of thrombocytopenia.
-
-    </h1>
+      <h1 className="m-auto my-2 w-full max-w-sm p-4 text-base font-semibold text-gray-900 md:text-xl dark:text-gray-900">
+        4Ts Score for Heparin-Induced Thrombocytopenia: Differentiates patients
+        with HIT from those with other causes of thrombocytopenia.
+      </h1>
       {allQuestions}
       <ScoreCard score={score}></ScoreCard>
     </>

@@ -39,11 +39,11 @@ Rate of VTE at 2.5 months* = 1.8 - 2.0%
 Rate of VTE at 2.5 months* = 1.8 - 2.0%
 
 *Note: Median follow-up time was 2.5 months.`,
-      3: `Intermediate Risk (1-2 Points)
+      3: `High Risk (≥3 Points)
 
-Rate of VTE at 2.5 months* = 1.8 - 2.0%
-
-*Note: Median follow-up time was 2.5 months.`,
+      Rate of VTE at 2.5 months* = 6.7 - 7.1%
+      
+      *Note: Median follow-up time was 2.5 months.`,
       4: `High Risk (≥3 Points)
 
 Rate of VTE at 2.5 months* = 6.7 - 7.1%
@@ -54,7 +54,6 @@ Rate of VTE at 2.5 months* = 6.7 - 7.1%
 Rate of VTE at 2.5 months* = 6.7 - 7.1%
 
 *Note: Median follow-up time was 2.5 months.`,
-      
     };
     return (
       <>
