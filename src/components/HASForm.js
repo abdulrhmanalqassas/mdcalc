@@ -16,7 +16,7 @@ function GetAll(questions) {
     questionsAns[question] = choiceValue;
     console.log(questionsAns);
     for (const key in questionsAns) {
-      finalScore += questionsAns[key];
+      finalScore += (questionsAns[key]);
     }
     setScore(finalScore);
   };
@@ -49,7 +49,7 @@ Alternatives to anticoagulation should be considered: Patient is at very high ri
       8: `Scores greater than 5 were too rare to determine risk, but are likely over 10%.
 Alternatives to anticoagulation should be considered: Patient is at very high risk for major bleeding.
 `,
-      8: `Scores greater than 5 were too rare to determine risk, but are likely over 10%.
+      9: `Scores greater than 5 were too rare to determine risk, but are likely over 10%.
 Alternatives to anticoagulation should be considered: Patient is at very high risk for major bleeding.
 `,
     };

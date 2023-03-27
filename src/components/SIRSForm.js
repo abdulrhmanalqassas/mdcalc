@@ -2,7 +2,9 @@ import { SIRSquestions } from "./data";
 import React, { useState } from "react";
 const questionsAns = {};
 const questions = SIRSquestions;
+
 function GetAll(questions) {
+  const [extra,setExtra] = useState("");
   const [score, setScore] = useState(0);
   const isActiveStyle = {
     active:
@@ -14,21 +16,29 @@ function GetAll(questions) {
   const handleClick = (question, choiceValue) => {
     var finalScore = 0;
     questionsAns[question] = choiceValue;
-    console.log(questionsAns);
+
     for (const key in questionsAns) {
-      finalScore += questionsAns[key];
+      const x = questionsAns[key];
+      finalScore += x;
     }
+
     setScore(finalScore);
   };
   const ScoreCard = ({ score }) => {
-    const scoreString = () => {};
+    const scoreString = {
+      0: "This patient does not meet SIRS criteria. For other causes of shock, see the Next Steps section.",
+      1: "This patient does not meet SIRS criteria. For other causes of shock, see the Next Steps section.",
+      2: "not suggestive of overt DIC, may be non-overt DIC; repeat within next 1-2 days and manage clinically as appropriate.",
+      3: "not suggestive of overt DIC, may be non-overt DIC; repeat within next 1-2 days and manage clinically as appropriate.",
+      4: "not suggestive of overt DIC, may be non-overt DIC; repeat within next 1-2 days and manage clinically as appropriate.",
+    };
     return (
       <>
-        <div className="m-auto my-2 w-full max-w-sm p-4 bg-green border border-gray-200 rounded-lg shadow sm:p-6 dark:bg-green-800 dark:border-gray-700">
+        <div className=" m-auto my-2 w-full max-w-sm p-4 bg-green border border-gray-200 rounded-lg shadow sm:p-6 dark:bg-green-800 dark:border-gray-700">
           <h5 className="mb-3 text-base font-semibold text-gray-900 md:text-xl dark:text-white">
-            {score} points
+          {(score+"0").split("").reduce((partialSum, a)=>parseInt(partialSum) + parseInt(a), 0)} points
           </h5>
-          <ul className="my-4 space-y-3">{scoreString[score]}</ul>
+          <ul className="my-4 space-y-3">{scoreString[(score+"0").split("").reduce((partialSum, a)=>parseInt(partialSum) + parseInt(a), 0)]}</ul>
         </div>
       </>
     );
@@ -52,9 +62,9 @@ function GetAll(questions) {
     if (Object.hasOwnProperty.call(questions, key)) {
       const element = questions[key];
       var option = element.map((elem, index) => {
-        console.log("allQuestions", elem, index);
+        console.log(elem[Object.keys(elem)] === questionsAns[question]);
         return (
-          <li key={Object.keys(elem)}>
+          <li key={Object.keys(elem) + elem[1]}>
             <div
               onClick={() => handleClick(question, elem[Object.keys(elem)])}
               href="#"
@@ -72,26 +82,14 @@ function GetAll(questions) {
           </li>
         );
       });
-
-      allQuestions.push(
-        <>
-          {" "}
-          {question === "Heart rate >90" && (
-            <h1 className="m-auto my-2 w-full max-w-sm p-4 text-base font-semibold text-gray-900 md:text-xl dark:text-gray-900">
-              m-auto my-2 w-full max-w-sm p-4 text-base font-semibold
-              text-gray-900 md:text-xl dark:text-gray-900
-            </h1>
-          )}{" "}
-          <Listitem question={question} option={option} />
-        </>
-      );
+      allQuestions.push(<Listitem question={question} option={option} />);
     }
   }
   return (
     <>
-      <h1 className="m-auto my-2 w-full max-w-sm p-4 text-base font-semibold text-gray-900 md:text-xl dark:text-gray-900">
-        4Ts Score for Heparin-Induced Thrombocytopenia: Differentiates patients
-        with HIT from those with other causes of thrombocytopenia.
+      <h1 className="m-auto my-2 w-full max-w-lg  p-4 text-base font-semibold text-gray-900 md:text-xl dark:text-gray-900">
+        SIRS, Sepsis, and Septic Shock Criteria Defines the severity of sepsis
+        and septic shock.
       </h1>
       {allQuestions}
       <ScoreCard score={score}></ScoreCard>

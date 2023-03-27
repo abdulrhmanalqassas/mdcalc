@@ -17,7 +17,7 @@ function GetAll(questions) {
     questionsAns[question] = choiceValue;
     console.log(questionsAns);
     for (const key in questionsAns) {
-      finalScore += questionsAns[key];
+      finalScore += parseInt(questionsAns[key]);
     }
     setScore(finalScore);
   };
@@ -39,7 +39,7 @@ function GetAll(questions) {
       <>
         <div className=" m-auto my-2 w-full max-w-sm p-4 bg-green border border-gray-200 rounded-lg shadow sm:p-6 dark:bg-green-800 dark:border-gray-700">
           <h5 className="mb-3 text-base font-semibold text-gray-900 md:text-xl dark:text-white">
-            {score} points
+            {(score+" ").split("").reduce((partialSum, a)=> partialSum + a, )} points
           </h5>
           <ul className="my-4 space-y-3">{scoreString[score]}</ul>
         </div>
