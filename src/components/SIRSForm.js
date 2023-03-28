@@ -77,7 +77,12 @@ function GetAll(questions) {
                   )
               ]
             }{" "}
-            {extra}
+            {((score + "0")
+                  .split("")
+                  .reduce(
+                    (partialSum, a) => parseInt(partialSum) + parseInt(a),
+                    0
+                  )>1)?extra:""}
           </ul>
         </div>
       </>
