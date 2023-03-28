@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/mdcalc/static/css/main.0db11e27.css",
-    "main.js": "/mdcalc/static/js/main.0de6fe50.js",
+    "main.js": "/mdcalc/static/js/main.bd7074a7.js",
     "index.html": "/mdcalc/index.html",
     "main.0db11e27.css.map": "/mdcalc/static/css/main.0db11e27.css.map",
-    "main.0de6fe50.js.map": "/mdcalc/static/js/main.0de6fe50.js.map"
+    "main.bd7074a7.js.map": "/mdcalc/static/js/main.bd7074a7.js.map"
   },
   "entrypoints": [
     "static/css/main.0db11e27.css",
-    "static/js/main.0de6fe50.js"
+    "static/js/main.bd7074a7.js"
   ]
 }
