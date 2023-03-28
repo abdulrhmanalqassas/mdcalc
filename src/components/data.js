@@ -47,19 +47,19 @@ export const SIRSquestions = {
   "Temp >38°C (100.4°F) or <36°C (96.8°F)": [{ YES: 1 }, { "no": "0" }],
   "Heart rate >90": [{ YES: 1 }, { "no": "0" }],
   "Respiratory rate >20 or PaCO₂ <32 mm Hg": [{ YES: 1 }, { "no": "0" }],
-  "WBC >12,000/mm³, <4,000/mm³, or >10% bands": [{ YES: 1 }, { "no": ".0" }],
+  "WBC >12,000/mm³, <4,000/mm³, or >10% bands": [{ YES: 1 }, { "no": "0" }],
 
-  "Suspected or present source of infection": [{ YES: .0 }, { "no": "0" }],
+  "Suspected or present source of infection": [{ YES: 0 }, { "no": "0" }],
   "Lactic acidosis, SBP <90 or SBP drop ≥40 mm Hg of normal": [
-    { YES: 0 },
+    { YES: 0},
     { "no": "0" },
   ],
   "Severe sepsis with hypotension, despite adequate fluid resuscitation": [
-    { YES: .0 },
+    { YES: 0 },
     { "no": "0" },
   ],
   "Evidence of ≥2 organs failing": [
-    { YES: .0 },
+    { YES: 0 },
     { "no": "0" },
   ],
 };

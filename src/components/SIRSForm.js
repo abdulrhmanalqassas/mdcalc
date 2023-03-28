@@ -4,7 +4,7 @@ const questionsAns = {};
 const questions = SIRSquestions;
 
 function GetAll(questions) {
-  const [extra,setExtra] = useState("");
+  const [extra, setExtra] = useState("");
   const [score, setScore] = useState(0);
   const isActiveStyle = {
     active:
@@ -13,10 +13,32 @@ function GetAll(questions) {
       "flex items-center p-3  font-bold text-gray-700 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white",
   };
 
-  const handleClick = (question, choiceValue) => {
+  const handleClick = (question, choiceValue, elem) => {
     var finalScore = 0;
+    console.log("question, choiceValue", question, choiceValue, "elem>>", elem);
     questionsAns[question] = choiceValue;
-
+    if (
+      question === "Lactic acidosis, SBP <90 or SBP drop ≥40 mm Hg of normal" &&
+      elem.YES === 0
+    )
+      setExtra("This patient meets severe sepsis criteria");
+    if (
+      question ==
+        "Severe sepsis with hypotension, despite adequate fluid resuscitation" &&
+      elem.YES === 0
+    )
+      setExtra("This patient meets septic shock criteria.");
+    if (question == "Evidence of ≥2 organs failing" && elem.YES === 0)
+      setExtra(
+        "This patient meets multiple organ dysfunction syndrome Management"
+      );
+    if (
+      question == "Suspected or present source of infection" &&
+      elem.YES === 0
+    )
+      setExtra(
+        "Follow your guidelines for sepsis, which typically include aggressive fluid resuscitation, early, broad-spectrum antibiotics, ICU consultation, CVP evaluation, and occasionally pressors and transfusion."
+      );
     for (const key in questionsAns) {
       const x = questionsAns[key];
       finalScore += x;
@@ -28,17 +50,35 @@ function GetAll(questions) {
     const scoreString = {
       0: "This patient does not meet SIRS criteria. For other causes of shock, see the Next Steps section.",
       1: "This patient does not meet SIRS criteria. For other causes of shock, see the Next Steps section.",
-      2: "not suggestive of overt DIC, may be non-overt DIC; repeat within next 1-2 days and manage clinically as appropriate.",
-      3: "not suggestive of overt DIC, may be non-overt DIC; repeat within next 1-2 days and manage clinically as appropriate.",
-      4: "not suggestive of overt DIC, may be non-overt DIC; repeat within next 1-2 days and manage clinically as appropriate.",
+      2: "This patient meets SIRS criteria.",
+      3: "This patient meets SIRS criteria.",
+      4: "This patient meets SIRS criteria.",
     };
     return (
       <>
         <div className=" m-auto my-2 w-full max-w-sm p-4 bg-green border border-gray-200 rounded-lg shadow sm:p-6 dark:bg-green-800 dark:border-gray-700">
           <h5 className="mb-3 text-base font-semibold text-gray-900 md:text-xl dark:text-white">
-          {(score+"0").split("").reduce((partialSum, a)=>parseInt(partialSum) + parseInt(a), 0)} points
+            {(score + "0")
+              .split("")
+              .reduce(
+                (partialSum, a) => parseInt(partialSum) + parseInt(a),
+                0
+              )}{" "}
+            points
           </h5>
-          <ul className="my-4 space-y-3">{scoreString[(score+"0").split("").reduce((partialSum, a)=>parseInt(partialSum) + parseInt(a), 0)]}</ul>
+          <ul className="my-4 space-y-3">
+            {
+              scoreString[
+                (score + "0")
+                  .split("")
+                  .reduce(
+                    (partialSum, a) => parseInt(partialSum) + parseInt(a),
+                    0
+                  )
+              ]
+            }{" "}
+            {extra}
+          </ul>
         </div>
       </>
     );
@@ -66,7 +106,9 @@ function GetAll(questions) {
         return (
           <li key={Object.keys(elem) + elem[1]}>
             <div
-              onClick={() => handleClick(question, elem[Object.keys(elem)])}
+              onClick={() =>
+                handleClick(question, elem[Object.keys(elem)], elem)
+              }
               href="#"
               className={
                 elem[Object.keys(elem)] === questionsAns[question]
