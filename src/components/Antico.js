@@ -209,17 +209,11 @@ const theme = createTheme({
 
 export default function Hex() {
   return (
-    // <>
-    // <Box bgcolor="background" padding={4} height="80vh">
-    //     <DndProvider backend={HTML5Backend}>
-    //       <Node o={organization} />
-    //     </DndProvider>
-    //   </Box>
-    // </>
+   
     <>
       <Box marginX={5}>
         <h1 className="flex-1 font-poppins font-semibold ss:text-[72px] text-[52px] text-black ss:leading-[100.8px] leading-[75px]">
-          Management and prophylaxis of VTE in cancer patients{" "}
+        Anticoagulant for immobilized patients in ICU{" "}
         </h1>
       </Box>
 

@@ -1,6 +1,6 @@
 import styles from "./style";
 // import { discount, robot } from "../assets";
-import doctor from "./doctor-svgrepo-com.svg";
+import doctor from "./logo.jpg";
 // import GetStarted from "./GetStarted";
 import React from "react";
 

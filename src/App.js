@@ -8,16 +8,23 @@ import HASForm from "./components/HASForm";
 import Hex from "./components/Hex";
 import Nav from "./nav";
 import Hero from "./Home";
+import Thrombo from "./components/thrombo";
+import Antico from "./components/Antico";
+
+import Mange from "./components/mange";
 function App() {
   return (
     <div className=" bg-gradient-to-r from-[#c39bcf] to-[#eae5eb]">
       <Nav></Nav>
       <Routes>
-        
         <Route path="/*" element={<Hero></Hero>} />
         <Route path="/hex" element={<Hex></Hex>} />
+        <Route path="/throm" element={<Thrombo></Thrombo>} />
+        <Route path="/Mange" element={<Mange></Mange>} />
+        <Route path="/antico" element={<Antico></Antico>} />
+
         <Route path="/question" element={<QuestionsForm></QuestionsForm>} />
-        
+
         <Route path="/SIRS" element={<SIRSForm />} />
         <Route path="/ISTH" element={<ISTHForm />} />
         <Route path="/Khorana" element={<Khorana />} />
