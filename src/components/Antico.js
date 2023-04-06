@@ -22,7 +22,7 @@ import Tooltip from "@material-ui/core/Tooltip";
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 import { useDrag, useDrop } from "react-dnd";
-import organization from "./org.json";
+import antic from "./antic.json";
 import hos from "./hos.json";
 import phar from "./phar.json";
 import {
@@ -209,144 +209,49 @@ const theme = createTheme({
 
 export default function Hex() {
   return (
-   
     <>
       <Box marginX={5}>
         <h1 className="flex-1 font-poppins font-semibold ss:text-[72px] text-[52px] text-black ss:leading-[100.8px] leading-[75px]">
-        Anticoagulant for immobilized patients in ICU{" "}
+          Anticoagulant for immobilized patients in ICU{" "}
         </h1>
       </Box>
 
       <ThemeProvider theme={theme}>
         <Box bgcolor="background" padding={2} marginX={5} height="fitContent">
           <DndProvider backend={HTML5Backend}>
-            <Node o={organization} />
-          </DndProvider>
-        </Box>
-        <Box bgcolor="background" padding={2} marginX={5} height="fitContent">
-          <DndProvider backend={HTML5Backend}>
-            <Node
-              o={{
-                tradingName: "Hospitalized patients without VTE ",
-                account: [
-                  {
-                    name: "Accou",
-                    product: {
-                      name: "thromboprophylaxis, LMWH over UFH Discontinuing   thromboprophylaxis at the time of hospital discharge ",
-                    },
-                  },
-                ],
-              }}
-            />
-          </DndProvider>
-        </Box>
-        <Box marginX={5}>
-          LMWH or fondaparinux for thromboprophylaxis rather than UFH
-          postoperative thromboprophylaxis over preoperative thromboprophylaxis
-        </Box>
-
-        <Box bgcolor="background" padding={2} marginX={5} height="fitContent">
-          <DndProvider backend={HTML5Backend}>
-            <Node o={hos} />
-          </DndProvider>
-        </Box>
-        <Box marginX={5}>
-          For multiple myeloma patients receiving lenalidomide, thalidomide, or
-          pomalidomide-based regimens, low-dose acetylsalicylic acid (ASA) or
-          fixed low-dose VKA or LMWH is recommended{" "}
-        </Box>
-        <Box marginX={5}>
-          For patients with cancer and a central venous catheter (CVC), no
-          thromboprophylaxis is indicated
-        </Box>
-        <Box bgcolor="background" padding={2} marginX={5} height="fitContent">
-          <DndProvider backend={HTML5Backend}>
-            <Node o={phar} />
-          </DndProvider>
-        </Box>
-
-        {/* nnnnnn */}
-        <Box bgcolor="background" padding={2} marginX={5} height="fitContent">
-          <DndProvider backend={HTML5Backend}>
-            <Node
-              o={{
-                tradingName: "Patients with platelets <25,000/μL.",
-                account: [
-                  {
-                    name: "Accou",
-                    product: {
-                      name: "Recommend against pharmacologic thromboprophylaxis",
-                    },
-                  },
-                ],
-              }}
-            />
-          </DndProvider>
-
-          <DndProvider backend={HTML5Backend}>
-            <Node
-              o={{
-                tradingName: "Patients with platelets 25,000–49,000/μL. ",
-                account: [
-                  {
-                    name: "Accou",
-                    product: {
-                      name: "Suggest individualized approach ",
-                    },
-                  },
-                ],
-              }}
-            />
-          </DndProvider>
-
-          <DndProvider backend={HTML5Backend}>
-            <Node
-              o={{
-                tradingName:
-                  "Patients admitted for the sole purpose of minor procedures or chemotherapy infusion as well as patients undergoing stem cell/bone marrow transplantation.",
-                account: [
-                  {
-                    name: "Accou",
-                    product: {
-                      name: "Routine pharmacologic thromboprophylaxis should not be offered ",
-                    },
-                  },
-                ],
-              }}
-            />
+            <Node o={antic} />
           </DndProvider>
         </Box>
 
         <Box marginX={5}>
-          Suggest use of LMWH over UFH. Recommend against use of DOACs.
+          For patients with cancer and incidental (unsuspected) pulmonary
+          embolism (PE), the ASH guideline panel Suggests short-term
+          anticoagulation treatment rather than obser-vation
         </Box>
+
         <Box bgcolor="background" padding={2} marginX={5} height="fitContent">
           <DndProvider backend={HTML5Backend}>
             <Node
               o={{
                 tradingName:
-                  "Hospitalized patients with cancer and reduced mobility",
+                  "Short-term treatment for patients with active cancer (initial 3-6 months)",
                 account: [
                   {
                     name: "Accou",
                     product: {
-                      name: "UFH",
+                      name: "ASH guideline Panel suggests DOAC (apixaban, edoxaban, or rivaroxaban) over LMWH ",
                     },
                   },
-                ],
-              }}
-            />
-          </DndProvider>
-
-          <DndProvider backend={HTML5Backend}>
-            <Node
-              o={{
-                tradingName: "When crcl is ≥30 mL/min ",
-                account: [
                   {
-                    name: "Accou",
+                    name: "Au",
                     product: {
-                      name: "Recommend LMWH or fondaparinux .",
+                      name: "The ASH guideline panel suggests DOAC (apixaban, edoxaban, or rivaroxaban) over VKA",
+                    },
+                  },
+                  {
+                    name: "Aumm",
+                    product: {
+                      name: "ASH guideline panel Suggests LMWH over VKA",
                     },
                   },
                 ],
@@ -354,29 +259,53 @@ export default function Hex() {
             />
           </DndProvider>
         </Box>
-        
+        <Box marginX={5}>
+          For patients with cancer and subsegmental PE (SSPE), the ASH guideline
+          panel suggests short-term anti- Coagulation treatment rather than
+          observation
+        </Box>
+        <Box marginX={5}>
+          For patients with cancer and recurrent VTE Despite receiving
+          therapeutic LMWH, the ASH guideline panel Suggests increasing the LMWH
+          dose to a supratherapeutic level or continuing with a therapeutic dose
+          Continuing with a therapeutic dose
+        </Box>
+
+        <Box bgcolor="background" padding={2} marginX={5} height="fitContent">
+          {
+            " Long-term treatment (>6 months) for patients with active Cancer and VTE."
+          }
+          
+        </Box>
+        <Box marginX={5}>
+        For patients with active cancer and VTE Receiving long-term anticoagulation for secondary prophylaxis, the ASH guideline panel suggests continuing indefinite anti-coagulation over stopping after completion of a definitive period of anticoagulation
+        </Box>
+        <Box marginX={5}>
+        For patients with active cancer and VTE Requiring long-term anticoagulation (.6 months), the ASH guideline panel suggests using DOACs or LMWH
+Panel suggests using DOACs or LMWH
+
+        </Box>
+ 
+
+
+
         <Box bgcolor="background" padding={2} marginX={5} height="fitContent">
           <DndProvider backend={HTML5Backend}>
             <Node
               o={{
                 tradingName:
-                  "If pharmacologic thromboprophylaxis is contraindicated",
+                  "Risks factors may be present before the ICU admission (i.e., advanced age, malignancy, major surgery, and major trauma), or may be related to the ICU stay (such as mechanical ventilation and central venous catheters ",
                 account: [
                   {
                     name: "Accou",
                     product: {
-                      name: "Recommend PCD",
+                      name: "prolonged thromboprophylaxis and/or treatment of thrombotic complications The LMWH have been shown to be superior to UFH",
                     },
                   },
                 ],
               }}
             />
           </DndProvider>
-          </Box>
-          <Box marginX={5}>
-          Abbreviations: CrCl, creatinine clearance; DOAC, direct oral
-          anticoagulant; LMWH, low-molecular-weight heparin; PCD, pneumatic
-          compression device; UFH, unfractionated heparin
         </Box>
       </ThemeProvider>
     </>

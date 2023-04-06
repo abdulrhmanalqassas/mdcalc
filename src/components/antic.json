@@ -1,0 +1,19 @@
+{
+    "tradingName": "Initial treatment (within first week) for patients With cancer",
+    "account": [
+      {
+        "name": "Accou",
+        "product": { "name": "The Strong recommendation (rather than conditional) for initial Treatment with LMWH over UFH for patients with cancer with  VTE in the first " }
+      },
+      {
+        "name": "Au",
+        "product": { "name": "UFH might be preferred over LMWH for the patient with cancer With severe renal impairment (defined as creatinine clearance,30 mL/min). " }
+      },
+      {
+        "name": "Aumm",
+        "product": { "name": "The use of fondaparinux might be considered for Patients with cancer and VTE and a prior history of HIT" }
+      }
+    ]
+   
+  }
+  
