@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/mdcalc/static/css/main.0db11e27.css",
-    "main.js": "/mdcalc/static/js/main.bd7074a7.js",
+    "main.css": "/mdcalc/static/css/main.0c400fbb.css",
+    "main.js": "/mdcalc/static/js/main.26df4a3c.js",
+    "static/media/doctor-svgrepo-com.svg": "/mdcalc/static/media/doctor-svgrepo-com.e263cdfda47bb845e59c8611ac7bf0f5.svg",
     "index.html": "/mdcalc/index.html",
-    "main.0db11e27.css.map": "/mdcalc/static/css/main.0db11e27.css.map",
-    "main.bd7074a7.js.map": "/mdcalc/static/js/main.bd7074a7.js.map"
+    "main.0c400fbb.css.map": "/mdcalc/static/css/main.0c400fbb.css.map",
+    "main.26df4a3c.js.map": "/mdcalc/static/js/main.26df4a3c.js.map"
   },
   "entrypoints": [
-    "static/css/main.0db11e27.css",
-    "static/js/main.bd7074a7.js"
+    "static/css/main.0c400fbb.css",
+    "static/js/main.26df4a3c.js"
   ]
 }
