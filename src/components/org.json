@@ -1,0 +1,19 @@
+{
+    "tradingName": "Primary prophylaxis for patients with cancer undergoing surgery",
+    "account": [
+      {
+        "name": "Accou",
+        "product": { "name": "* lower bleeding risk:pharmacological thromboprophylaxis is recommended" }
+      },
+      {
+        "name": "Au",
+        "product": { "name": "*high bleeding risk:mechanical thromboprophylaxis is recommended " }
+      },
+      {
+        "name": "Aumm",
+        "product": { "name": "*high risk for thrombosis, except in those at high risk of bleeding:a combination of mechanical and pharmacologic thromboprophylaxis " }
+      }
+    ]
+   
+  }
+  

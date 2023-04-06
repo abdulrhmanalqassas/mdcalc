@@ -1,0 +1,19 @@
+{
+    "tradingName": "Pharmacological thromboprophylaxis in the absence of bleeding or other contraindications.",
+    "account": [
+      {
+        "name": "Accou",
+        "product": { "name": "Patients without additional risk factors." }
+      },
+      {
+        "name": "Au",
+        "product": { "name": "Patients with platelets ≥50,000/μL" }
+      },
+      {
+        "name": "Aumm",
+        "product": { "name": "Patients with acute medical illness or reduced mobility" }
+      }
+    ]
+   
+  }
+  

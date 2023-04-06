@@ -1,0 +1,19 @@
+{
+    "tradingName": "Primary prophylaxis in ambulatory patients with cancer receiving systemic therapy.",
+    "account": [
+      {
+        "name": "Accou",
+        "product": { "name": "patients with cancer at low risk for thrombosis receiving systemic therapy, no thromboprophylaxis is recommend" }
+      },
+      {
+        "name": "Au",
+        "product": { "name": "Patients with cancer at intermediate risk of thrombosis thromboprophylaxis with a DOAC (apixaban or rivaroxaban)  or no thromboprophylaxis " }
+      },
+      {
+        "name": "Aumm",
+        "product": { "name": "patients with cancer at high risk for thrombosis receiving systemic therapy, thromboprophylaxis with a DOAC (apixaban or rivaroxaban) over no thromboprophylaxis is recommended " }
+      }
+    ]
+   
+  }
+  

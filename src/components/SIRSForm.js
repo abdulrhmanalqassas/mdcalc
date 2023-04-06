@@ -36,7 +36,7 @@ function GetAll(questions) {
       question == "Suspected or present source of infection" &&
       elem.YES === 0
     )
-      setExtra(
+      setExtra( 
         "Follow your guidelines for sepsis, which typically include aggressive fluid resuscitation, early, broad-spectrum antibiotics, ICU consultation, CVP evaluation, and occasionally pressors and transfusion."
       );
     for (const key in questionsAns) {
