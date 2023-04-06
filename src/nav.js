@@ -191,7 +191,7 @@ export default function Nav() {
       <Typography
         as="li"
         variant="small"
-        color="blue-gray"
+        color="black"
         className="p-1 font-normal"
       >
         <Link to="/" className="flex items-center">
@@ -270,9 +270,7 @@ export default function Nav() {
       <MobileNav open={openNav}>
         <div className="container mx-auto">
           {navList}
-          <Button variant="gradient" size="sm" fullWidth className="mb-2">
-            <span>Buy Now</span>
-          </Button>
+         
         </div>
       </MobileNav>
     </Navbar>
