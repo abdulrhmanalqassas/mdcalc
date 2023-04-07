@@ -32,7 +32,7 @@ function GetAll(questions) {
       5: `Stroke risk was 7.2% per year In >90,000 patients (the Swedish Atrial Fibrillation Cohort Study) and 10.0% risk of stroke/TIA/systemic embolism.`,
       6: `Stroke risk was 9.7% per year In >90,000 patients (the Swedish Atrial Fibrillation Cohort Study) and 13.6% risk of stroke/TIA/systemic embolism.`,
       7: `Stroke risk was 11.2% per year In >90,000 patients (the Swedish Atrial Fibrillation Cohort Study) and 15.7% risk of stroke/TIA/systemic embolism.`,
-      8: `Stroke risk was 7.2% per year In >90,000 patients (the Swedish Atrial Fibrillation Cohort Study) and 10.0% risk of stroke/TIA/systemic embolism.`,
+      8: `Stroke risk was 10.8% per year In >90,000 patients (the Swedish Atrial Fibrillation Cohort Study) and 15.2% risk of stroke/TIA/systemic embolism.`,
       9: `Stroke risk was 12.2% per year In >90,000 patients (the Swedish Atrial Fibrillation Cohort Study) and 17.4% risk of stroke/TIA/systemic embolism.`,
     };
     return (
