@@ -176,7 +176,7 @@ export default function Nav() {
                     'block px-4 py-2 text-sm'
                   )}
                 >
-                 {" anticoagulation(TP)"}
+                 {" Immobilized patients in ICU"}
         </Link>
               )}
        
@@ -203,7 +203,7 @@ export default function Nav() {
                     'block px-4 py-2 text-sm'
                   )}
                 >
-                 immobilized  in ICU
+                 Thrombocytopenia &thrombosis
         </Link>
               )}
               </Menu.Item>

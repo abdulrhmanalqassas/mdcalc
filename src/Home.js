@@ -32,6 +32,12 @@ function DropdownComponent() {
             <p class="font-bold mb-2">●	Amira Ayman Ibrahim.</p>
             <p class="text-gray-500">Student</p>
           </div>
+                    
+          <div class="mb-6">
+            <p class="font-bold mb-2">●	Amany mohamed mansour.</p>
+            <p class="text-gray-500">students</p>
+          </div>
+
 
           <div class="mb-6">
             <p class="font-bold mb-2">●	Sarah ayad mohammed.</p>
@@ -46,11 +52,6 @@ function DropdownComponent() {
           <div class="mb-6">
             <p class="font-bold mb-2">●	Boshra Hashad AboElkhair.</p>
             <p class="text-gray-500">Student</p>
-          </div>
-
-          <div class="mb-6">
-            <p class="font-bold mb-2">●	Amany mohamed mansour.</p>
-            <p class="text-gray-500">Web developer</p>
           </div>
 
           <div class="mb-6">
