@@ -24,36 +24,16 @@ function GetAll(questions) {
   };
   const ScoreCard = ({ score }) => {
     const scoreString = {
-      0: `Low Risk (0 Points)
-
-      Rate of VTE at 2.5 months* = 0.3 - 0.8%
-      
-      *Note: Median follow-up time was 2.5 months.`,
-      1: `Intermediate Risk (1-2 Points)
-
-Rate of VTE at 2.5 months* = 1.8 - 2.0%
-
-*Note: Median follow-up time was 2.5 months.`,
-      2: `Intermediate Risk (1-2 Points)
-
-Rate of VTE at 2.5 months* = 1.8 - 2.0%
-
-*Note: Median follow-up time was 2.5 months.`,
-      3: `High Risk (≥3 Points)
-
-      Rate of VTE at 2.5 months* = 6.7 - 7.1%
-      
-      *Note: Median follow-up time was 2.5 months.`,
-      4: `High Risk (≥3 Points)
-
-Rate of VTE at 2.5 months* = 6.7 - 7.1%
-
-*Note: Median follow-up time was 2.5 months.`,
-      5: `High Risk (≥3 Points)
-
-Rate of VTE at 2.5 months* = 6.7 - 7.1%
-
-*Note: Median follow-up time was 2.5 months.`,
+      0: `Stroke risk was 0.2% per year In >90,000 patients (the Swedish Atrial Fibrillation Cohort Study) and 0.3% risk of stroke/TIA/systemic embolism.`,
+      1: `Stroke risk was 0.6% per year In >90,000 patients (the Swedish Atrial Fibrillation Cohort Study) and 0.9% risk of stroke/TIA/systemic embolism.`,
+      2: `Stroke risk was 2.2% per year In >90,000 patients (the Swedish Atrial Fibrillation Cohort Study) and 2.9% risk of stroke/TIA/systemic embolism.`,
+      3: `Stroke risk was 3.2% per year In >90,000 patients (the Swedish Atrial Fibrillation Cohort Study) and 4.6% risk of stroke/TIA/systemic embolism.`,
+      4: `Stroke risk was 4.8% per year In >90,000 patients (the Swedish Atrial Fibrillation Cohort Study) and 6.7% risk of stroke/TIA/systemic embolism.`,
+      5: `Stroke risk was 7.2% per year In >90,000 patients (the Swedish Atrial Fibrillation Cohort Study) and 10.0% risk of stroke/TIA/systemic embolism.`,
+      6: `Stroke risk was 9.7% per year In >90,000 patients (the Swedish Atrial Fibrillation Cohort Study) and 13.6% risk of stroke/TIA/systemic embolism.`,
+      7: `Stroke risk was 11.2% per year In >90,000 patients (the Swedish Atrial Fibrillation Cohort Study) and 15.7% risk of stroke/TIA/systemic embolism.`,
+      8: `Stroke risk was 7.2% per year In >90,000 patients (the Swedish Atrial Fibrillation Cohort Study) and 10.0% risk of stroke/TIA/systemic embolism.`,
+      9: `Stroke risk was 12.2% per year In >90,000 patients (the Swedish Atrial Fibrillation Cohort Study) and 17.4% risk of stroke/TIA/systemic embolism.`,
     };
     return (
       <>
@@ -123,9 +103,9 @@ Rate of VTE at 2.5 months* = 6.7 - 7.1%
   return (
     <>
       <h1 className="m-auto my-2 w-full max-w-xl p-4 text-base font-semibold text-gray-900 md:text-xl dark:text-gray-900">
-        Khorana Risk Score for Venous Thromboembolism in Cancer Patients
-        Predicts risk of VTE for cancer patients depending on type of cancer and
-        other factors.
+        CHA₂DS₂-VASc Score for Atrial Fibrillation Stroke Risk Calculates stroke
+        risk for patients with atrial fibrillation, possibly better than the
+        CHADS₂ Score.
       </h1>
       {allQuestions}
       <ScoreCard score={score}></ScoreCard>

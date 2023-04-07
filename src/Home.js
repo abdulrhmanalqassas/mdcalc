@@ -96,7 +96,7 @@ function DrC() {
 
           <div class="grid md:grid-cols-3 xl:grid-cols-4 gap-x-6 lg:gap-xl-12">
             <div class="mb-6">
-              <p class="font-bold mb-2">●	●	Dr:Noha A. Hamdy .</p>
+              <p class="font-bold mb-2">●	●	Prof :Noha A. Hamdy .</p>
               <p class="text-gray-500">Clinical pharmacy and Pharmacy Practice department faculty of pharmacy </p>
             </div>
 
