@@ -5,6 +5,7 @@ import SIRSForm from "./components/SIRSForm";
 import ISTHForm from "./components/ISTHForm";
 import Khorana from "./components/khorana";
 import HASForm from "./components/HASForm";
+import Last from "./components/LastForm";
 import Hex from "./components/Hex";
 import Nav from "./nav";
 import Hero from "./Home";
@@ -22,6 +23,7 @@ function App() {
         <Route path="/throm" element={<Thrombo></Thrombo>} />
         <Route path="/Mange" element={<Mange></Mange>} />
         <Route path="/antico" element={<Antico></Antico>} />
+        <Route path="/last" element={<Last></Last>} />
 
         <Route path="/question" element={<QuestionsForm></QuestionsForm>} />
 

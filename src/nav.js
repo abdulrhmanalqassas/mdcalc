@@ -29,7 +29,7 @@ export default function Nav() {
       <Menu as="div" className="relative inline-block text-left">
       <div>
         <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
-          Options
+          Forms
           <ChevronDownIcon className="-mr-1 h-5 w-5 text-gray-400" aria-hidden="true" />
         </Menu.Button>
       </div>
@@ -66,7 +66,7 @@ export default function Nav() {
                     'block px-4 py-2 text-sm'
                   )}
                 >
-                   HAS Form
+                   HAS-BLED Form
         </Link>
               )}
        
@@ -74,26 +74,55 @@ export default function Nav() {
             </Menu.Item>
             <Menu.Item>
             {({ active }) => (
-                <Link to="HAS"
+                <Link to="question"
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                     'block px-4 py-2 text-sm'
                   )}
                 >
-                   HAS Form
+                 4Ts Score
+        </Link>
+              )}
+       
+
+            </Menu.Item>
+            <Menu.Item>
+            {({ active }) => (
+                <Link to="last"
+                  className={classNames(
+                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                    'block px-4 py-2 text-sm'
+                  )}
+                >
+                 last Score
+        </Link>
+              )}
+       
+
+            </Menu.Item>
+           
+            <Menu.Item>
+            {({ active }) => (
+                <Link to="Khorana"
+                  className={classNames(
+                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                    'block px-4 py-2 text-sm'
+                  )}
+                >
+                   Khorana Form
         </Link>
               )}
             </Menu.Item>
             <form method="POST" action="#">
               <Menu.Item>
               {({ active }) => (
-                <Link to="HAS"
+                <Link to="ISTH"
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                     'block px-4 py-2 text-sm'
                   )}
                 >
-                   HAS Form
+                   ISTH Form
         </Link>
               )}
               </Menu.Item>
@@ -134,7 +163,7 @@ export default function Nav() {
                     'block px-4 py-2 text-sm'
                   )}
                 >
-                1
+               VTE
         </Link>
               )}
        
@@ -147,7 +176,7 @@ export default function Nav() {
                     'block px-4 py-2 text-sm'
                   )}
                 >
-                  2
+                 {" anticoagulation(TP)"}
         </Link>
               )}
        
@@ -161,7 +190,7 @@ export default function Nav() {
                     'block px-4 py-2 text-sm'
                   )}
                 >
-                 3
+                 thrombocytopenia
         </Link>
               )}
             </Menu.Item>
@@ -174,7 +203,7 @@ export default function Nav() {
                     'block px-4 py-2 text-sm'
                   )}
                 >
-                  4
+                 immobilized  in ICU
         </Link>
               )}
               </Menu.Item>
@@ -223,7 +252,7 @@ export default function Nav() {
           variant="small"
           className="mr-4 cursor-pointer py-1.5 font-normal"
         >
-          <span>KFS</span>
+          <span>ALEXU</span>
         </Typography>
         <div className="hidden lg:block">{navList}</div>
         <Button variant="gradient" size="sm" className="hidden lg:inline-block">

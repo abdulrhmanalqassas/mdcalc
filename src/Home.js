@@ -7,71 +7,110 @@ import React from "react";
 function DropdownComponent() {
   return (
     <>
+    <div class="container  px-6 mx-auto">
+      <section class=" text-gray-800 text-center">
+        <h2 class="text-3xl font-bold mb-6">
+          Meet the <u class="text-blue-600">team</u>
+        </h2>
+
+        <div class="grid md:grid-cols-3 xl:grid-cols-4 gap-x-6 lg:gap-xl-12">
+          <div class="mb-6">
+            <p class="font-bold mb-2">●	Israa Mostafa Rashed.</p>
+            <p class="text-gray-500">Student</p>
+          </div>
+
+          <div class="mb-6">
+            <p class="font-bold mb-2">●	Reem Magdy Mohamed.</p>
+            <p class="text-gray-500">Student</p>
+          </div>
+
+          <div class="mb-6">
+            <p class="font-bold mb-2">●	Aya Mahmoud Awad.</p>
+            <p class="text-gray-500">Student</p>
+          </div>
+          <div class="mb-6">
+            <p class="font-bold mb-2">●	Amira Ayman Ibrahim.</p>
+            <p class="text-gray-500">Student</p>
+          </div>
+
+          <div class="mb-6">
+            <p class="font-bold mb-2">●	Sarah ayad mohammed.</p>
+            <p class="text-gray-500">Student</p>
+          </div>
+
+          <div class="mb-6">
+            <p class="font-bold mb-2">●	Aya Tag Eldin Mohamed.</p>
+            <p class="text-gray-500">Student</p>
+          </div>
+
+          <div class="mb-6">
+            <p class="font-bold mb-2">●	Boshra Hashad AboElkhair.</p>
+            <p class="text-gray-500">Student</p>
+          </div>
+
+          <div class="mb-6">
+            <p class="font-bold mb-2">●	Amany mohamed mansour.</p>
+            <p class="text-gray-500">Web developer</p>
+          </div>
+
+          <div class="mb-6">
+            <p class="font-bold mb-2">●	Aya Ramadan Haridy.</p>
+            <p class="text-gray-500">Student</p>
+          </div>
+
+          <div class="mb-6">
+            <p class="font-bold mb-2">●	Lobna sayed Ibrahim.</p>
+            <p class="text-gray-500">Student</p>
+          </div>
+
+          <div class="mb-6">
+            <p class="font-bold mb-2">●	Israa Abd Elhamid Mohamed.</p>
+            <p class="text-gray-500">Student</p>
+          </div>
+
+          <div class="mb-6">
+            <p class="font-bold mb-2">●	Marina Michael Anwer</p>
+            <p class="text-gray-500">Student</p>
+          </div>
+          <div class="mb-6">
+            <p class="font-bold mb-2"> ●	Rehab Ibrahim Hassan</p>
+            <p class="text-gray-500">Student</p>
+          </div>
+
+         
+        </div>
+      </section>
+    </div>
+  </>
+  );
+}
+
+function DrC() {
+  return (
+    <>
       <div class="container  px-6 mx-auto">
         <section class=" text-gray-800 text-center">
           <h2 class="text-3xl font-bold mb-6">
-            Meet the <u class="text-blue-600">team</u>
+          Project  <u class="text-blue-600">supervisors:</u>
           </h2>
 
           <div class="grid md:grid-cols-3 xl:grid-cols-4 gap-x-6 lg:gap-xl-12">
             <div class="mb-6">
-              <p class="font-bold mb-2">John Doe</p>
-              <p class="text-gray-500">Co-founder</p>
+              <p class="font-bold mb-2">●	●	Dr:Noha A. Hamdy .</p>
+              <p class="text-gray-500">Clinical pharmacy and Pharmacy Practice department faculty of pharmacy </p>
             </div>
 
             <div class="mb-6">
-              <p class="font-bold mb-2">Lisa Ferrol</p>
-              <p class="text-gray-500">Web designer</p>
+              <p class="font-bold mb-2">●	●	Dr:Yumna M. Shekeban </p>
+              <p class="text-gray-500">Clinical pharmacy and Pharmacy Practice department faculty of pharmacy </p>
             </div>
 
             <div class="mb-6">
-              <p class="font-bold mb-2">Maria Smith</p>
-              <p class="text-gray-500">Senior consultant</p>
-            </div>
-            <div class="mb-6">
-              <p class="font-bold mb-2">Agatha Bevos</p>
-              <p class="text-gray-500">Co-founder</p>
+              <p class="font-bold mb-2">●	●	Dr:Maha A. Atta </p>
+              <p class="text-gray-500">Clinical Pharmacist Alexandria medical university Hospital in Intensive care unit  </p>
             </div>
 
-            <div class="mb-6">
-              <p class="font-bold mb-2">Darren Randolph</p>
-              <p class="text-gray-500">Marketing expert</p>
-            </div>
-
-            <div class="mb-6">
-              <p class="font-bold mb-2">Soraya Letto</p>
-              <p class="text-gray-500">SEO expert</p>
-            </div>
-
-            <div class="mb-6">
-              <p class="font-bold mb-2">Maliha Welch</p>
-              <p class="text-gray-500">Web designer</p>
-            </div>
-
-            <div class="mb-6">
-              <p class="font-bold mb-2">Zeynep Dudley</p>
-              <p class="text-gray-500">Web developer</p>
-            </div>
-
-            <div class="mb-6">
-              <p class="font-bold mb-2">Avaya Hills</p>
-              <p class="text-gray-500">Copywritter</p>
-            </div>
-
-            <div class="mb-6">
-              <p class="font-bold mb-2">Thierry Fischer</p>
-              <p class="text-gray-500">Senior consultant</p>
-            </div>
-
-            <div class="mb-6">
-              <p class="font-bold mb-2">Aisling Sheldon</p>
-              <p class="text-gray-500">Senior developer</p>
-            </div>
-
-            <div class="mb-6">
-              <p class="font-bold mb-2">Ayat Black</p>
-              <p class="text-gray-500">Web designer</p>
-            </div>
+           
           </div>
         </section>
       </div>
@@ -140,6 +179,7 @@ const Hero = () => {
         <div className={`ss:hidden ${styles.flexCenter}`}></div>
       </section>
       <DropdownComponent></DropdownComponent>
+      <DrC></DrC>
     </>
   );
 };

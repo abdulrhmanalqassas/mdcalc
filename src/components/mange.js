@@ -183,7 +183,7 @@ function Node({ o, parent }) {
   ) : (
     <T
       label={
-        <Organization
+        <Organization 
           org={o}
           onCollapse={handleCollapse}
           collapsed={collapsed}

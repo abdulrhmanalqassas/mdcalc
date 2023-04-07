@@ -77,11 +77,13 @@ export const khoronaQuestions = {
     { Other: 0 },
   ],
   "Pre-chemotherapy platelet count ≥350x10⁹/L": [{ YES: 1 }, { "no": "0" }],
+  
   "Hemoglobin level <10 g/dL or using RBC growth factors": [
     { YES: 1 },
     { "no": "0" },
   ],
-  "Pre-chemotherapy leukocyte count >11x10⁹/L": [{ YES: 1 }, { "no": "0" }],
+  "Pre-chemotherapy leukocyte count >11x10⁹/L": [{ YES: 1 }, { "no": "0" }]
+  , "BMI ≥35 kg/m^2 ": [{ YES: 1 }, { "no": 0 }],
 };
 //////////////////
 export const HASquestions = {
@@ -102,5 +104,34 @@ export const HASquestions = {
   "Medication usage predisposing to bleeding Aspirin, clopidogrel, NSAIDs": [
     { YES: 1 },
     { "no": 0 },
-  ], "BMI ≥35 kg/m^2 ": [{ YES: 1 }, { "no": 0 }],
+  ],
+  "Alchol use  ≥8 drinks/week": [
+    { YES: 1 },
+    { "no": 0 },
+  ],
+};
+
+export const last = {
+  "Hypertension Uncontrolled, >160 mmHg systolic": [{ YES: 1 }, { "no": "0" }],
+  "Renal disease Dialysis, transplant, Cr >2.26 mg/dL or >200 µmol/L": [
+    { YES: 1 },
+    { "no": 0 },
+  ],
+  "Liver disease Cirrhosis or bilirubin >2x normal with AST/ALT/AP >3x normal":
+    [{ YES: 1 }, { "no": 0 }],
+  "Stroke history": [{ YES: 1 }, { "no": 0 }],
+  "Prior major bleeding or predisposition to bleeding": [{ YES: 1 }, { "no": "0" }],
+  "Labile INR Unstable/high INRs, time in therapeutic range <60%": [
+    { YES: 1 },
+    { "no": 0 },
+  ],
+  "Age >65": [{ YES: 1 }, { "no": 0 }],
+  "Medication usage predisposing to bleeding Aspirin, clopidogrel, NSAIDs": [
+    { YES: 1 },
+    { "no": 0 },
+  ],
+  "Alchol use  ≥8 drinks/week": [
+    { YES: 1 },
+    { "no": 0 },
+  ],
 };
