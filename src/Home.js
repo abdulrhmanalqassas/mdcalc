@@ -97,12 +97,13 @@ function DrC() {
           <div class="grid md:grid-cols-3 xl:grid-cols-4 gap-x-6 lg:gap-xl-12">
             <div class="mb-6">
               <p class="font-bold mb-2">●	●	Prof :Noha A. Hamdy .</p>
-              <p class="text-gray-500">Clinical pharmacy and Pharmacy Practice department faculty of pharmacy </p>
+              <p class="text-gray-500">Lecturer at clinical pharmacy department faculty of pharmacy Alexandria University
+</p>
             </div>
 
             <div class="mb-6">
               <p class="font-bold mb-2">●	●	Dr:Yumna M. Shekeban </p>
-              <p class="text-gray-500">Clinical pharmacy and Pharmacy Practice department faculty of pharmacy </p>
+              <p class="text-gray-500">Demonstrator at clinical pharmacy department faculty of pharmacy Alexandria University </p>
             </div>
 
             <div class="mb-6">
@@ -137,14 +138,14 @@ const Hero = () => {
 
           <div className="flex flex-row justify-between items-center w-full">
             <h1 className="flex-1 font-poppins font-semibold ss:text-[72px] text-[52px] text-white ss:leading-[100.8px] leading-[75px]">
-              The Next <br className="sm:block hidden" />{" "}
-              <span className="text-gradient">Generation</span>{" "}
+            Management of  <br className="sm:block hidden" />{" "}
+              <span className="text-gradient">coagulopathy</span>{" "}
             </h1>
             <div className="ss:flex hidden md:mr-4 mr-0"></div>
           </div>
 
           <h1 className="font-poppins font-semibold ss:text-[68px] text-[52px] text-white ss:leading-[100.8px] leading-[75px] w-full">
-            team Name
+        among critically ill Cancer patients
           </h1>
           <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
             We are a group of thirteen senior students, clinical pharmacy
