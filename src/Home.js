@@ -25,7 +25,7 @@ function DropdownComponent() {
           </div>
 
           <div class="mb-6">
-            <p class="font-bold mb-2">●	Aya Mahmoud Awad.</p>
+            <p class="font-bold mb-2">●	Aya Tag Eldin Mohamed.</p>
             <p class="text-gray-500">Student</p>
           </div>
           <div class="mb-6">
@@ -39,7 +39,7 @@ function DropdownComponent() {
           </div>
 
           <div class="mb-6">
-            <p class="font-bold mb-2">●	Aya Tag Eldin Mohamed.</p>
+            <p class="font-bold mb-2">●	Aya Mahmoud Awad.</p>
             <p class="text-gray-500">Student</p>
           </div>
 

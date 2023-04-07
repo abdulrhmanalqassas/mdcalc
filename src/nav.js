@@ -94,7 +94,7 @@ export default function Nav() {
                     'block px-4 py-2 text-sm'
                   )}
                 >
-                 last Score
+                 CHA₂DS₂-VASc
         </Link>
               )}
        
